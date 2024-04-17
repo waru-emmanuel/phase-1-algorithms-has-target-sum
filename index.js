@@ -1,5 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  // for iteration through the pair of elements
+   for (let i = 0; i < array.length; i++) {
+       const firstDig = array[i];
+        for (let j = i + 1; j< array.length; j++) {
+           const secondDig = array[j];
+           // checking if the sum of the current firstDigit nad secondDigit are equal to target
+            if (firstDig + secondDig === target) {
+              return true; // if found, true
+            }
+        }
+   }
+   return false; // if not found, false
 }
 
 /* 
@@ -8,6 +20,8 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  -write a for loop to iterate through the array elements
+  -This will ensure that both piointer, i and j loop through to check the elements eqauling the target that is wanted
 */
 
 /*
